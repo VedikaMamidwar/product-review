@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product review page</title>
+    <style>
+        .title{
+            text-align: center;
+        }
+        .main-img{
+            width:auto;
+            height: 400px;
+            object-fit: cover;
+            border: solid 1px black;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 10px;
+            margin: 20px auto;
+
+        }
+        .product-img{
+            height:100px;
+            width:100px;
+            object-fit: cover;
+            border: solid 1px black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .img-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">product review</h1>
+
+    <img src="./img1.jpg" class="main-img" id="main-img">
+
+    <div class="img-container">
+        <img src="./img1.jpg" class="product-img" onclick="changeImage(1)"/>
+        <img src="./img2.jpg" class="product-img" onclick="changeImage(2)"/>
+        <img src="./img3.jpg" class="product-img"onclick="changeImage(3)"/>
+        <img src="./img4.jpg" class="product-img"  onclick="changeImage(4)"/>
+        <img src="./img5.jpg" class="product-img" onclick="changeImage(5)"/>
+
+    </div>
+    <script>
+        function changeImage(num){
+            const mainImage = document.getElementById('main-img');
+
+            if(num==1){
+                mainImage.src="./img1.jpg";
+            }
+            else if(num==2){
+                mainImage.src="./img2.jpg";
+            }
+            else if(num==3){
+                mainImage.src="./img3.jpg";
+            }
+            else if(num==4){
+                mainImage.src="./img4.jpg";
+            }
+            else if  (num==5){
+                mainImage.src="./img5.jpg";
+            }
+
+        }
+    </script>
+</body>
+</body>
+</html>
